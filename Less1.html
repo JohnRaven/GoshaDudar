@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<!-- PART_7 (заполнение <head>)-->		
+		<title>Дударь_Less1</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<meta name="keywords" content="тэги, описание, страница, для, поисковик"> <!-- meta-tag для поисковых систем (краткое) описание содержания -->
+		<meta name="description" content="Здесь находится описание того, что будет отображаться у поисковых систем под заголовком нашей страницы"> <!--meta-tag для поисковых систем(развернутое) описание содержания {до 200 символов рекоменд.}-->
+		
+		<link rel="stylesheet" href="style.css" type="text/css"> <!--Подключение стилей CSS {rel (relation) связь; stylesheet (таблица стилей)}-->
+		<script src="script.js" type="text/javascript"></script> <!-- Подключение скриптов JavaScripts {src (source) источник}-->
+
+	</head>
+	<body>
+<!-- PART_1 -->
+		I say yes, I say no... Степан... <!-- Комментарии для HTML (гор.клавиша {ctrl + /} -->
+		<p>Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!</p>
+		<a name="example"></a>
+		<h1>Заголовок1</h1>
+		<h2>Заголовок2</h2>
+		<h3>Заголовок3</h3>
+		<h4>Заголовок4</h4>
+		<h5>Заголовок5</h5>
+		<h6>Заголовок6</h6>
+
+		<em>КУРСИВ</em>, <!--определяет ВАЖНОСТЬ текста {говорилка}--> <i>курсив</i>, <!--без выделения важности--> 
+		<strong>ЖИРНЫЙ</strong>, <!--определяет ВАЖНОСТЬ текста {говорилка}--> <b>жирный</b>, <!--без выделения важности--> 
+		<strike>Зачеркнутый</strike>
+
+		<abbr title="Туполев">ТУ</abbr>		<!-- аббревиатура -->
+		<address>Belarus, Grodno</address> <!-- Адрес ДЛЯ ПОИСКОВОГО РОБОТА именно так-->
+		<u>Подчеркнутый текс</u>
+	
+<!-- PART_2 -->	
+		<small>Маленький текст</small>
+		<big>Большой текст</big>
+		<pre>разный текст          много пробелов
+
+
+
+					много энтеров</pre>
+		
+		<blockquote cite="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BB%D0%B8%D0%BC%D0%BE%D1%80%D1%84%D0%B8%D0%B7%D0%BC_%D0%BD%D0%B0%D1%81%D0%B5%D0%BA%D0%BE%D0%BC%D1%8B%D1%85"><p>Полиморфизм насекомых (от др.-греч. πολύμορφος «многообразный») — существование нескольких внешне отличающихся форм у одного и того же вида. Данные формы часто приспособлены к выполнению особых функций в популяциях или семьях данного вида.</p></blockquote>    <!-- тег длинной цитаты. Для роботов, ТЕКСТ "не украден" --> 
+		<q cite="https://ru.wikipedia.org">Короткая цитата, но уже в ковычках</q>
+		<cite>Цитата выделяет источник цитаты, название произведения или автора цитаты</cite>
+
+		<hr/>	<!-- Горизонтальная линия -->
+		<br/>	<!-- Пустая строка -->
+		<br/>
+		<p class="BBB">I like B( . )( . )bs</p>
+		<div class="boobs">
+			<h2 class="text">I LIKE BOOOOOObs!!!</h2>
+			<p>"...We all living in America..." The song Ramstain</p>
+		</div>
+		<div class="s1">
+
+			Вот такой текст
+		
+		</div>
+		<!-- Пометка изменений в документе -->
+		<ul>
+	      <li><del datetime="2015-05-07">Пункты меню слипаются.</del></li>
+	      <li><del datetime="2016-07-07">Неверный размер шрифта в заголовке.</del></li>
+	      <li><ins datetime="2015-05-08">Логотип не обновлён.
+</ins></li>
+	      <li><ins datetime="2015-05-08">Ошибки в текстах</ins>.</li>
+	    </ul>
+	    <!-- Выделение текста маркером <mark> --> 
+	    <p>Полиморфизм насекомых (от др.-греч. πολύμορφος «многообразный») — <mark>существование нескольких внешне отличающихся форм у одного и того же вида</mark>. Данные формы часто приспособлены к выполнению особых функций в популяциях или семьях данного вида</p>
+
+<!-- PART_3 (списки)-->	
+		<nobr>Полиморфизм насекомых (от др.-греч. πολύμορφος «многообразный») — существование нескольких внешне отличающихся форм у одного и того же вида. Данные формы часто приспособлены к выполнению особых функций в популяциях или семьях данного вида</nobr> <!-- текст в одну строку -->
+	
+		<!-- нумерованный список -->
+		<ol type="I" start="4" reversed="reversed"> 
+			<li>1 Пункт</li>
+			<li>2 Пункт</li>
+			<li>3 Пункт</li>
+			<li>.......</li>
+		</ol>
+		<!-- НЕупорядоченный (ненумерованный) список Unordered List(альтернатива более старая <dir></dir>-->
+		<ul type="circle">
+			<li>1 Пункт</li> <!-- элемент списка, List Item -->
+			<li>2 Пункт</li>
+			<li>3 Пункт</li>
+			<li>4 Пункт</li>
+			<li>5 Пункт</li>
+		</ul>
+		<!-- Списки определений {No-Less} -->
+		<dl>
+	      <dt>dl</dt>
+	      <dd>Definition List, сам список определений</dd>
+
+	      <dt>dt</dt>
+	      <dd>Definition Term, термин</dd>
+
+	      <dt>dd</dt>
+	      <dd>Definition Definition, определение термина</dd>
+	    </dl>
+
+<!-- PART_4 (ссылки)-->	
+		<!-- пренаправляют на другие сайты/страницы -->		
+		<a href="https://www.google.ru/" target="blank" title="переход на GooGLe">Сайт гугла</a><br/>
+		<!-- пренаправляют на опредененное место на странице с элементом на строке 19!!! -->
+		<a href="#example">Переход на заголовок 1</a><br/>
+		<a href="file:///D:/WORK/_John_BackStage/ПРОМтехМонтаж/HTML/Гоша%20Дударь/Less1.html#example">Переход на заголовок 1 с перезагрузкой страницы</a><br/>
+		<!-- пренаправляют на почту -->
+		<a href="mailto:address@yandex.ru">Email</a><br/>
+
+<!-- PART_5 (картинки)-->
+		<img src="https://espanarusa.com/files/autoupload/62/16/17/2tzs30a4408916.jpg" height="70%" width="70%" title="Водопад )))" alt="пропала картинка ((((" border="2px">
+
+<!-- PART_6 (таблицы не делать желательно)-->	
+		<table border="2px" class="table_random">
+			<caption>Таблицы размеров</caption>  <!-- Название таблицы -->
+			<tr>						
+				<th>Столбец 1</th>		<!-- th {table header} Заголовки столбцов-->
+				<th>Столбец 2</th>
+				<th>Столбец 3</th>
+			</tr>
+			<tr><td>1 ячейка</td><td>2 ячейка</td><td>3 ячейка</td></tr>
+					<!-- tr {table row} Строки таблицы-->
+					<!-- td {table data} Ячейка строки-->
+			<tr><td>4 ячейка</td><td>5 ячейка</td><td>6 ячейка</td></tr>
+			<tr><td>7 ячейка</td><td>8 ячейка</td><td>9 ячейка</td></tr>
+			<tr><td>10 ячейка</td><td>11 ячейка</td><td>12 ячейка</td></tr>
+			<br/>
+		</table>
+		<br>
+		<table border="1" cellpadding="7" cellspacing="0">  
+					<!--cellpadding - отступы текста от границ-->
+					<!--cellspacing - "пробелы" по рамке-->
+			<tr>
+				<td colspan="2" bgcolor="#D3EDF6" align="center">Ячейка1</td>
+					<!--colspan - кол-во столбцов в данной ячейке-->
+			</tr>
+			<tr>
+				<td valign="top" align="center">Ячейка2</td>
+					<!--valign - положение текста по вертикали ТОЛЬКО С ТАБЛИЦАМИ-->
+					<!--align - положение текста по горизонтали-->
+				<td width="98%" valign="top">Ячейка3</td>
+				<td width="2%" valign="bottom">Ячейка4</td>
+			</tr>
+		</table>
+<!-- PART_8 (поля ввода)-->
+		<form name="test" action="" method="post"> 
+			<!-- name - имя формы (для стилей и т.п.)
+				action - где происходит обработка формы ???? 
+				method {get/post} - метод с пом. кот. отправляется запрос. ????--> 
+			<label for="user_name">Введите ваше имя:</label> <input type="text" placeholder="Поиск..." name="name" id="user_name" title="Подсказка при наведении" maxlength="3" />
+				<!-- связка label for с id в input позволяет при нажатии на надпись автоматом попадать в поле ввода;
+					placeholder - "скрытая" надпись в поле ввода
+					maxlength - максимальная длина ввода -->
+			<br><br>
+			<label for="birthday">День рождения:</label> <input type="date" name="date" id="birthday">
+				<!-- type {date(дата),datetime,datetime-local(еще и время),week(неделя и день)} -->
+			<br><br>
+			<label for="user_url">Введите свой URL:</label><input type="url" name="url" id="user_url">
+			<br><br>
+			
+			<input type="range"><br><br>
+			<label for="male">Мужской</label><input type="radio" name="state" id="male">
+			<label for="female">Женский</label><input type="radio" name="state" id="female">
+				<!-- для выбора одного из вариантов radio используется одинаковое имя name -->
+			<br><br>
+			Согласен<input type="checkbox"><br>
+			Не согласен<input type="checkbox"><br>
+			Возможно<input type="checkbox"><br>
+			Не возможно<input type="checkbox"><br>
+			<input type="password">
+			<input type="number">
+			<input type="file">	<!-- Загрузка файлов и отправка -->
+			<input type="color"> <!-- Выбор цвета -->
+			<input type="button" value="Отправить button">	<!-- Без перезагрузки -->
+			<input type="submit" value="Отправить submit"> 	<!-- С перезагрузкой -->
+			<input type="reset" value="Очистить"> <!-- Очистка всех полей ввода на странице/форме -->
+		</form>
+
+<!-- PART_9 (поле ввода TextArea)-->
+		<form action="" method="post"></form>
+		<p><b>Введите Ваш отзыв:</b></p>
+		<textarea name="text" id="" cols="45" rows="10"></textarea>
+				<!-- cols и rows лучше задавать в стилях -->
+		<input type="submit" value="Отправить"> <!--  или аналог кнопки  --> <button>Отправить</button>
+
+<!-- PART_10 (списки и опции)--> <br><br>
+		<form action="" method="post">
+			<select size="3" multiple="multiple" name="hero[]" id="">
+					<!-- multiple - возможность выбора нескольких опций
+						 size - размер отображаемых опций -->
+				<option disabled="disabled" value="Выберете партнера">Выберете партнера</option> <!-- disabled - опция не доступна для выбора -->
+				<option value="Петя">Петя</option>
+				<option value="Степа">Степа</option>
+				<option selected="selected" value="Таня">Таня</option>  <!-- selected - выбор по умолчанию -->
+				<option value="Света">Света</option>
+			</select>
+			<input type="submit" value="Отправить">
+		</form>
+		
+<!-- PART_11 (тэги HTML5 + audio/video)--> <br><br>
+		<audio controls="controls" autoplay="autoplay" loop="loop">
+			<!-- autoplay - автоматическое проигрывание при загрузке страницы
+				 loop - автоматическое повторение после окончания трека
+				 controls - отображение кнопок управления -->
+			<source src="audio/rasseykin_-_energiya_probujdeniya.mp3">
+			<!-- <source src="audio/Neizvesten-Martin_Garrix_-_Proxy_Original_Mix_Dutch_House_2014_public27380885(musico.ws).mp3">
+			<source src="audio/vowk_-_EventHorizon_.mp3"> -->
+			
+		</audio>
+		
+	</body>
+</html>

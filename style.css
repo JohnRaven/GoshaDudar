@@ -1,0 +1,72 @@
+h1{
+	color: red;
+}
+.boobs{					/*свойства контейнера*/
+	width: 50%; 		/*ширина контейнера*/
+	height: 100%;		/*высота контейнера*/
+	color: green;		/*цвет текста внутри контейнера*/
+    background: #fc0; 	/*цвет фона у контейнера*/
+    /*padding: 50px;    /*отступ текста от границ контейнера*/
+    border: solid 2px black; /*граница по контуру контейнера*/
+    /*float: left;*/
+    /*position: relative;   /*fixed- зафиксировано поверх страницы в "голове"*/
+    /*top: 0px; 
+    left: 50%;*/
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;
+    
+	
+	/*width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;*/
+    
+}
+.text{
+	color: red;
+}	
+.s1{
+	width: 100%;
+    height: 100%;
+    
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end; 
+    justify-content: center; 
+    overflow: auto;
+}
+.boobs p{
+	color: blue;
+	background: white;
+	border: solid 3px green;
+	height: calc(100% - 5px);
+}
+/*PART_6*/
+.table_random{
+	border-collapse: collapse; /*склеивает границы*/
+	background-color: yellow;
+	/*border-left  - граница слева*/
+	border-collapse: separate; /*расклеивает границы*/
+	border-spacing: 5px; /*задает расстояние между границами*/
+}
+.table_random td{
+	padding: 10px; /*padding {***-left}  - отступ внутри ячейки слева*/
+	border: solid 2px blue;
+	vertical-align: top; /*выравнивание по вертикали*/
+	text-align: left;		/*выравнивание по горизонтали*/
+}
+caption{
+	caption-side: bottom; /*{top,bottom}*/
+    text-align: right; /*{left,right,center}*/
+}
