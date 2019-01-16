@@ -70,3 +70,63 @@ caption{
 	caption-side: bottom; /*{top,bottom}*/
     text-align: right; /*{left,right,center}*/
 }
+/*PART_11*/
+details p{
+    margin: 1px;
+    padding: 2px;
+    border: solid 1px;
+    width: 100px;
+    text-align: center;}
+ruby{
+    font-size: 20px;}
+rt{
+    padding: 2px;
+    color: #E5C384FF;
+    background-color: #E0E0E0FF;}
+
+/*CSS/CSS3*/
+  /* Термины: 
+    h2{} - селекторы (классы, теги, iD)
+      h2{} - тег
+      .claSS{} - класс
+      #iD{} - идентификатор
+    h2{color:blue;}
+      color - свойство
+      blue - значение
+    *{} - применяется АБСОЛЮТНО ко всему документу
+    h2.claSS{} - все h2 с классом claSS
+    h2 i{} - все i, которые вложены в h2
+    h2, p, i.claSS, #iD{} - для всех h2, p, всех i с классом claSS, для идентификатора iD
+
+    псевдоэлемент:
+      h2.claSS:first-letter{} - первая буква в h2 с классом claSS
+      ...:first-line{} - первая линия/предложение
+        
+  */
+  .block{
+    width: 200px;
+    height: 200px;
+    background-color: #983CC2FF;
+    transition: all .8s;
+  }
+  .block:hover{
+    width: 300px;
+    height: 300px;
+    background-color: #BE32FFFF;
+    margin-top: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+
+  }
+  a.linkS{
+    color: green;
+    text-decoration: line-through; /*{underline,none,blink,line-through,overline}*/
+  }
+  a.linkS:hover{
+    color: #00E000FF;
+    text-decoration: none;
+    font-style: italic;}
+  .block:active{
+    background-color: blue;}
+  a.linkS:visited{
+    color:#15C524D2;}

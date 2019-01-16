@@ -15,6 +15,13 @@
 	<body>
 <!-- PART_1 -->
 		I say yes, I say no... Степан... <!-- Комментарии для HTML (гор.клавиша {ctrl + /} -->
+	<!-- Термины: 
+		<a> - тег;
+		<a alt="" title=""> - атрибуты
+		<a class=""> - класс (для "сборок" стилей)
+		<a id=""> - идентификатор (уникальное "значение")
+
+		-->
 		<p>Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!Создает абзац!</p>
 		<a name="example"></a>
 		<h1>Заголовок1</h1>
@@ -199,6 +206,22 @@
 		</form>
 		
 <!-- PART_11 (тэги HTML5 + audio/video)--> <br><br>
+		<!-- <header> - шапка
+			 <footer> - подвал/низ
+			 <article> - статтья, новость, пост...
+			 <aside> - боковая панель
+			 <menu> - список для браузеров {содержит <li>}
+			 <audio> - добавляет аудио
+			 <video> - добавляет видео
+			 <details> - "список" раскрывающийся {содержит <summery> и <p>}
+			 <mark> - маркировка текста	
+			 <ruby> - "подсказка" над символом
+			 <progress> - ход/прогресс загрузки визуально... -->
+			 
+
+
+
+
 		<audio controls="controls" autoplay="autoplay" loop="loop">
 			<!-- autoplay - автоматическое проигрывание при загрузке страницы
 				 loop - автоматическое повторение после окончания трека
@@ -208,6 +231,40 @@
 			<source src="audio/vowk_-_EventHorizon_.mp3"> -->
 			
 		</audio>
+		<br/>
+		<video controls autoplay loop height="300px" title="Просто рандомное видео" poster="http://computerologia.ru/wp-content/uploads/2016/09/post-4-ne-sushhestvuyushhie-stranitsyi.jpg">
+			<source src="d:\WORK\_John_BackStage\IT\HTML Academy  Профессиональный HTML и CSS Уровень 1\01 Вводный\Скринкасты\1 Инструменты разработчика Chrome DevTools.mp4">
+		</video> <br/>
+		<details>
+			<summary>Информация о машинах</summary>
+			<p>Белая</p>
+			<p>Черная</p>
+			<p>Серая</p>
+		</details> <br/>
+		<ruby>
+			₽<rt>Рубли</rt> 
+			$<rt>Баксы</rt>
+			&#8364;<rt>Евро</rt>
+		</ruby> <br/>
+		<progress max="100000" value="25000">
+			Загружено на <span id="value">25</span>%
+		</progress>
+<!-- 
+??? -->		<!-- Свойство формы для мгновенного вывода значения -->
+		<form oninput="result.value=(cm.value/2.54).toFixed(2)">
+			<p class="linkSa">Введите длину в сантиметрах:
+			<input type="number" name="cm" autofocus></p>
+			<p>Длина в дюймах:
+			<output name="result">требуется ввести значение</output></p>
+		</form>
+		<br><br>
+
+<!-- PART_CSS/CSS3 -->
+		<h2>CSS/CSS3</h2>
+		<div class="block">
+			<a href="#" class="linkS">Ссылки всякие</a>
+			<p class="linkSa">Абракадабра</p>
+		</div>
 		
 	</body>
 </html>
