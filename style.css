@@ -84,7 +84,7 @@ rt{
     color: #E5C384FF;
     background-color: #E0E0E0FF;}
 
-/*CSS/CSS3*/
+/*CSS/CSS3 CODEBRA + Гоша Дударь*/
   /* Термины: 
     h2{} - селекторы (классы, теги, iD)
       h2{} - тег
@@ -95,13 +95,33 @@ rt{
       blue - значение
     *{} - применяется АБСОЛЮТНО ко всему документу
     h2.claSS{} - все h2 с классом claSS
-    h2 i{} - все i, которые вложены в h2
+    h2 i{} - все i, которые вложены в h2 (КОНТЕКСТНЫЕ) - {все и дочерние и потомки}
+    h2>i{} - все i, которые вложены в h2 - {ТОЛЬКО дочерние}
     h2, p, i.claSS, #iD{} - для всех h2, p, всех i с классом claSS, для идентификатора iD
+    *[title]{} - все <теги>, которые имеют атрибут title
+    a[alt]{} - все <a>, которые имеют атрибут alt
+    a[alt][title]{} - все <a>, которые имеют атрибут alt И title
+    a[alt="картинка"]{} - все <a>, которые имеют атрибут alt со значением "картинка"
+    a[title ~="физик"]{} - все <a>, которые имеют в теге <title> слово "физик" {учитывает РЕГИСТР!}
+        ^= - начинаются с символов
+        $= - заканчивается символами
+        *= - содержит в слове символы
+???     |= - "примерно аналогичен" *=
+    p{color: green !important;} - повышает приоритет стиля (при одинаковых - последний)
 
-    псевдоэлемент:
+    псевдоэлементы:
       h2.claSS:first-letter{} - первая буква в h2 с классом claSS
-      ...:first-line{} - первая линия/предложение
-        
+      __:first-line{} - первая линия/предложение
+      __:first-child{} - первый элемент/тег
+      __:before{content:'значение';} - перед первым элементом
+      __:after{} - после последнего элемента
+    псевдоклассы:
+      a:link{} - все ссылки (ТОЛЬКО к ссылкам)
+      a:visited{} - все посещенные ссылки (ТОЛЬКО к ссылкам) 
+            ограниченные свойства{color, background-color, border-color, column-rule-color, outline-color}
+      __:hover{} - при наведении на элемент
+      __:active{} - в момент нажатия на элемент
+
   */
   .block{
     width: 200px;
@@ -122,7 +142,7 @@ rt{
     color: green;
     text-decoration: line-through; /*{underline,none,blink,line-through,overline}*/
   }
-  a.linkS:hover{
+  a.linkS:hover, .linkSa:hover{
     color: #00E000FF;
     text-decoration: none;
     font-style: italic;}
@@ -130,3 +150,45 @@ rt{
     background-color: blue;}
   a.linkS:visited{
     color:#15C524D2;}
+/*все дочерние в <p> включая всех потомков*/
+.par0 div p b{
+    color: brown;}
+/*все дочерние в <b> включая всех потомков*/
+.par0 div b{
+    font-style: italic;}
+/*все дочерние в <b> (ТОЛЬКО дочерние)*/
+.par0 div>b{
+    font-size: 20px;}
+/*выбор именно <b>, который стоит СРАЗУ! после <p> {ищет все пары тегов}*/
+.par1 p+b {
+    color: green;}
+/*выбор именно <p>, который стоит СРАЗУ! после <p>, который стоит СРАЗУ! после <b>*/
+.par1 b+p+p {
+    font-size: 22px;}
+
+/*Сылки, псевдоклассы и псевдоэлементы*/
+.CSS_href a:link{
+    font-size: 8pt;
+    height: 2em;
+    padding: 2px;
+    color: yellow;
+    font-style: italic;
+    background-color: magenta;
+    border: solid 2px green;}
+.CSS_href a:visited{
+    color: grey;
+    background-color: pink;
+    border-color: blue;}
+.CSS_href a:hover{
+    margin: 5px;
+    color: white;
+    font-style: oblique;
+    background-color: black;
+    border: dotted 4px #4CFF00DB;}
+.par1 p:hover:first-letter{
+    color: brown;
+    font-size: 2em;}
+.par1 p:hover:after{
+    content: ' - так-то';
+    font-size: 0.75em;
+    color: green;}
