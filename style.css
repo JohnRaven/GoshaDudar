@@ -108,6 +108,29 @@ rt{
         *= - содержит в слове символы
 ???     |= - "примерно аналогичен" *=
     p{color: green !important;} - повышает приоритет стиля (при одинаковых - последний)
+    color: rgb(255,0,0); - значения:
+                        от 0 до 255 (только целые)
+                        от 0% до 100% (и целые и дробные)
+    color: #D73427; - шестнадцатиричный (0-F) формат (HEX) #RRGGBB, примеры: 
+                        #000 -> #000000 
+                        #123 -> #112233
+                        #0FB -> #00FFBB
+!!!  color: rgba(255,0,0,0.25); - добавлена прозрачность в CSS3 (от 0 до 1.0)   !!!Осторожно со свойствами background и background-color
+!!!  color: #D7342777; - аналогично rgba (#RRGGBBAA), AA - от 0 до 255(00-ff)
+    Еденицы измерения:
+        абсолютные {in,cm,mm,pt,pc}
+        относительные {px,em,en} 
+    background-image: url(); - фоновая картинка
+    text-indent: 1.1em; - Отступ текста...
+    text-transform: capitalize; - каждая первая буква слова ЗАГЛАВНАЯ
+            - uppercase - все ЗАГЛАВНЫЕ
+            - lowercase - все строчные
+            - none - без изменеий
+    word-spacing:; - расстояние м/ж словами
+    letter-spacing:; - расстояние между буквами
+    line-height:; - расстояние между строками
+    
+
 
     псевдоэлементы:
       h2.claSS:first-letter{} - первая буква в h2 с классом claSS
@@ -121,6 +144,16 @@ rt{
             ограниченные свойства{color, background-color, border-color, column-rule-color, outline-color}
       __:hover{} - при наведении на элемент
       __:active{} - в момент нажатия на элемент
+
+Подключение шрифта локального (кроссбраузерный):
+    @font-face {
+        font-family: 'Open Sans';
+        src: url('open_sans.eot');
+        src: url('open_sans.ttf') format('truetype'),
+             url('open_sans.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+}
 
   */
   .block{
@@ -174,7 +207,8 @@ rt{
     color: yellow;
     font-style: italic;
     background-color: magenta;
-    border: solid 2px green;}
+    border: solid 2px green;
+    text-decoration: none;}
 .CSS_href a:visited{
     color: grey;
     background-color: pink;
@@ -192,3 +226,40 @@ rt{
     content: ' - так-то';
     font-size: 0.75em;
     color: green;}
+.par1 {
+    background-image: url(https://st.depositphotos.com/1005738/1413/v/950/depositphotos_14137279-stock-illustration-christmas-blue-snowflakes-background.jpg) ;
+    /*можно заменить следующим:*/
+    background: url(https://media.istockphoto.com/photos/lilac-flowers-on-white-wooden-background-top-view-flat-lay-picture-id538558702)
+    no-repeat center top /*/cover*/ #14F509A1;
+    width: 100%;}
+div.static img.raven {
+    width: 20%;
+    position: static;
+    padding: 20px;
+    opacity: 0.5;
+    right: 20px;
+}
+div.absolute img.raven {
+    width: 20%;
+    position: absolute;
+    padding: 20px;
+    opacity: 0.75;
+    margin-top: 10px;
+    right: 20px;
+}
+#icon {
+    width: 70px;
+    position: absolute; /*относительно всего окна браузера*/
+    top: bottom;
+    right: 5px;
+    border: solid 1px #F00EE96D;
+    background-color: #BCBCBCBF;
+}
+#icon1 {
+    width: 70px;
+    position: fixed; 
+    top: bottom;
+    align-items: center;
+    border: solid 1px #F00EE96D;
+    background-color: #BCBCBCBF;
+}
