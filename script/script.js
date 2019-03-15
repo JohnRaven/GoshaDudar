@@ -114,16 +114,13 @@ function countZero() {
     document.write("<br /> Окончательное количество нулей в факториале: " + countZ);*/
 
 
-    let factorial=46899647;
-    let number = 232;
-    
+    let factorial=18835759; //72300914  18835759
+    let number = 190;       //160       190
+                            //14460180  
 //Разложение на множители системы исчисления:
                 //условие
     let j = 2;
 	let d = 0;
-	let counter = 1;
-	let record = 0;
-	let a;
 	let arr = new Array();
 	            //разделение числа на множители и запись его в массив arr []
 	while(j<=number) {
@@ -136,14 +133,16 @@ function countZero() {
 			}
 		}
 		j++;
-	}
+    }
+    document.write("<br /> Массив множителей: " + arr);
+
 	            //разделение числа на множители и запись его в массив arr []    
     let arrP=[];    //массив множителей
     let arrQ=[];    //массив степеней множителей
-    for (let t=0; t<=arr.length; t++) {    
+    for (let t=0; t<=arr.length+1; t++) {    
         let count=1;
         let z=arr[0];
-        for (let i=1; i<arr.length;i++){
+        for (let i=1; i<=arr.length;i++){
             if (arr[i]==z) {
                 count++;
             }
@@ -153,7 +152,7 @@ function countZero() {
         arrQ.push(count);   //запись степени в массив
         arr=arr.filter(element => element !==z);    //удаление текущего множителя из массива
         
-        //document.write("<br /> Массив оставшийся: " + arr);
+        document.write("<br /> Массив оставшийся: " + arr);
     }
     document.write("<br /> <br /> Массив множителей: " + arrP);
     document.write("<br /> Массив степеней множителей: " + arrQ);
