@@ -115,7 +115,7 @@ function countZero() {
 
 
     let factorial=18835759; //72300914  18835759
-    let number = 190;       //160       190
+    let number = 112710;       //160       190
                             //14460180  
 //Разложение на множители системы исчисления:
                 //условие
@@ -135,11 +135,11 @@ function countZero() {
 		j++;
     }
     document.write("<br /> Массив множителей: " + arr);
-
+    let variable = arr.length;
 	            //разделение числа на множители и запись его в массив arr []    
     let arrP=[];    //массив множителей
     let arrQ=[];    //массив степеней множителей
-    for (let t=0; t<=arr.length+1; t++) {    
+    for (let t=0; t<arr.length + variable; t++) {    
         let count=1;
         let z=arr[0];
         for (let i=1; i<=arr.length;i++){
