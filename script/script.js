@@ -246,3 +246,58 @@ function divideNum(){
     }*/
     
 }
+
+function makeExchange() {
+    /*var money = 56;
+    var banknotes = [50, 25, 10, 5, 1];
+    var count = [];
+    document.write ('<br/> <br/> Вы хотите разменять сумму: ' + money);
+    document.write ('<br/> По следующим номиналам: ' + banknotes);
+    if (money <= 0) {
+        document.write ('<br/> <br/> Количество ваших денег слишком мало: ' + count);
+    } else if (money > 10000) {
+        document.write ('<br/> <br/> error: \"You are rich, my friend! We don\'t have so much coins for exchange\"');
+    } else {
+        for (let i=0; i<= banknotes.length; i++){
+            if (money > 0) {
+                let z= Math.trunc(money/banknotes[i]);
+                money = money - z*banknotes[i];
+                count.push(z);
+            } else {
+                break;
+            }
+        }
+        document.write ('<br/> <br/> Ваши деньги можно разбить следующим образом: ' + count);
+    }*/
+      
+    var money = 1256;
+    var banknotes = {H: 50, Q: 25, D: 10, N: 5, P: 1};  //Задан объект с ключами, у которых указаны номиналы
+    var str = JSON.stringify(banknotes);                //Представление объекта в виде строки
+    var count = {H: 0, Q: 0, D: 0, N: 0, P: 0};
+    document.write ('<br/> <br/> Вы хотите разменять сумму: ' + money);
+    document.write ('<br/> По следующим номиналам: ' + str);
+    if (money <= 0) {
+        document.write ('<br/> <br/> Количество ваших денег слишком мало: ' + '{}');
+    } else if (money > 10000) {
+        document.write ('<br/> <br/> {error: \"You are rich, my friend! We don\'t have so much coins for exchange\"}');
+    } else {
+        for(var i in banknotes){        //Цикл for для объекта (перебирает последовательно ключи)
+            if (money > 0) {
+                let z= Math.trunc(money/banknotes[i]);      //Берем целую часть от деления денег на номинал
+                money = money - z*banknotes[i];             //Отнимаем из общей суммы произведение номинала на его количество
+                count[i] = z;                               //В новый объект последовательно вносим количество номинала
+                document.write ('<br/> <br/> значения внутри цикла: Z=' + z +'; остаток денег: '+ money+ '; размененые: '+JSON.stringify(count));
+            }
+        }
+
+// Функция, которая объект переводит в строку, при этом удаляет все ключи, у которых значение равно нулю...
+        var strOut = JSON.stringify(count, function(key, value) {
+            if (value == 0) return undefined;
+            return value;
+            }
+        ); 
+        document.write ('<br/> <br/> Ваши деньги можно разбить следующим образом: ' + strOut);
+    }
+     
+    
+}
