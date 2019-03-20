@@ -301,3 +301,69 @@ function makeExchange() {
      
     
 }
+
+function sudoku(){
+    //Поиск чисел для одного массива:
+    /*for (var i=0; i<=matrix.length; i++){
+        if (matrix[i]==0){
+            for (var t=1; t<=9; t++) {
+                var count=0;
+                for (var k=0; k<=matrix.length; k++){
+                    if (matrix[k]==t) {
+                        count++;
+                    }
+                }
+                if (count==0){
+                    matrix[i]=t;
+                    break;
+                }
+            }
+        }
+    }*/
+    
+    
+    
+    var matrix =    [[5, 3, 4, 6, 7, 8, 9, 0, 0],
+                    [0, 7, 2, 1, 9, 5, 3, 4, 8],
+                    [1, 0, 8, 3, 4, 2, 5, 6, 7],
+                    [8, 5, 0, 7, 6, 1, 4, 2, 3],
+                    [4, 2, 6, 0, 5, 3, 7, 9, 1],
+                    [7, 1, 3, 9, 0, 4, 8, 5, 6],
+                    [9, 6, 1, 5, 3, 0, 2, 8, 4],
+                    [2, 8, 7, 4, 1, 9, 0, 3, 5],
+                    [3, 4, 5, 2, 8, 6, 1, 0, 9]];           
+                 /*[[5, 3, 4, 6, 7, 8, 9, 0, 0],
+                    [6, 7, 2, 1, 9, 5, 3, 4, 8],
+                    [1, 9, 8, 3, 4, 2, 5, 6, 7],
+                    [8, 5, 9, 7, 6, 1, 4, 2, 3],
+                    [4, 2, 6, 8, 5, 3, 7, 9, 1],
+                    [7, 1, 3, 9, 2, 4, 8, 5, 6],
+                    [9, 6, 1, 5, 3, 7, 2, 8, 4],
+                    [2, 8, 7, 4, 1, 9, 6, 3, 5],
+                    [3, 4, 5, 2, 8, 6, 1, 7, 9]]*/
+    //document.write ('<br> значение массива: '+ matrix);
+    for (let z=0; z<matrix.length; z++) {
+        for (var i=0; i<=matrix[z].length; i++){
+            if (matrix[z][i]==0){
+                for (var t=1; t<=9; t++) {
+                    var count=0;
+                    for (var k=0; k<=matrix[z].length; k++){
+                        if (matrix[z][k]==t) {
+                            count++;
+                        }
+                    }
+                    if (count==0){
+                        matrix[z][i]=t;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    document.write ('<br> значение массива: '+ matrix);
+
+
+
+
+    
+}
