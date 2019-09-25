@@ -264,3 +264,58 @@ div.absolute img.raven {
     border: solid 1px #F00EE96D;
     background-color: #BCBCBCBF;
 }
+/* --------------------------------------------- */
+.container {
+    position: relative;
+    margin: 200px auto;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 40%;
+    background-color: coral; */
+}
+ .hexagon {
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    transform: rotate3d(1, 1, 1, 45deg);
+}
+.side {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    font: normal 70px Arial;
+    text-align: center;
+    font-style: italic;
+    line-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    position: absolute;
+    width: 200px;
+    height: calc(1.732*200px);
+    border-bottom: solid 5px black;
+    border-top: solid 5px black;
+}
+.line:nth-child(2) {
+    transform: rotate(-120deg);
+    transform-origin: center center;
+}
+.line:nth-child(3) {
+    transform: rotate(120deg);
+    transform-origin: center center;
+} 
+.front {
+    color: blue;
+    transform: translateZ(200px);
+}
+.back {
+    transform: rotateY(180deg) translateZ(200px);
+}
